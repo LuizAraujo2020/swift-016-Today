@@ -131,27 +131,46 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditNotesCell" rowHeight="216" id="bA7-x9-z2n">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditDateCell" rowHeight="216" id="bA7-x9-z2n">
                                 <rect key="frame" x="0.0" y="128" width="414" height="216"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bA7-x9-z2n" id="DeO-N5-XtV">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Lt-E7-1ik">
+                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="X8L-as-yi1">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+                                        </datePicker>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="X8L-as-yi1" firstAttribute="top" secondItem="DeO-N5-XtV" secondAttribute="top" id="BaR-Qj-4y1"/>
+                                        <constraint firstAttribute="trailing" secondItem="X8L-as-yi1" secondAttribute="trailing" id="GsM-my-uhJ"/>
+                                        <constraint firstItem="X8L-as-yi1" firstAttribute="leading" secondItem="DeO-N5-XtV" secondAttribute="leading" id="PwJ-Vf-910"/>
+                                        <constraint firstAttribute="bottom" secondItem="X8L-as-yi1" secondAttribute="bottom" id="UvH-WD-5oG"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditNotesCell" rowHeight="216" id="L5S-3N-Lb2">
+                                <rect key="frame" x="0.0" y="344" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L5S-3N-Lb2" id="nXm-Wb-la4">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xvB-WS-Fha">
                                             <rect key="frame" x="20" y="11" width="374" height="194"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="194" id="xyg-ja-6s6"/>
+                                                <constraint firstAttribute="height" constant="194" id="U1w-7c-3FV"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="8Lt-E7-1ik" firstAttribute="leading" secondItem="DeO-N5-XtV" secondAttribute="leadingMargin" id="D8E-Q2-hrp"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="8Lt-E7-1ik" secondAttribute="trailing" id="GFr-Ww-1Yh"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="8Lt-E7-1ik" secondAttribute="bottom" id="pw0-Qf-Y8B"/>
-                                        <constraint firstItem="8Lt-E7-1ik" firstAttribute="top" secondItem="DeO-N5-XtV" secondAttribute="topMargin" id="qex-F5-lMD"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="xvB-WS-Fha" secondAttribute="trailing" id="O8J-v0-2aa"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="xvB-WS-Fha" secondAttribute="bottom" id="ckp-02-HpI"/>
+                                        <constraint firstItem="xvB-WS-Fha" firstAttribute="leading" secondItem="nXm-Wb-la4" secondAttribute="leadingMargin" id="kon-OM-Mcm"/>
+                                        <constraint firstItem="xvB-WS-Fha" firstAttribute="top" secondItem="nXm-Wb-la4" secondAttribute="topMargin" id="u1w-8t-IXj"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
