@@ -9,7 +9,7 @@ import UIKit
 
 class ReminderListDataSource: NSObject {
   
-  
+  private lazy var dateFormatter = RelativeDateTimeFormatter()
   
 }
 
@@ -27,8 +27,8 @@ extension ReminderListDataSource: UITableViewDataSource {
     }
     
     let reminder = Reminder.testData[indexPath.row]
-    
-    cell.configure(title: reminder.title, dateText: reminder.dueDate.description, isDone: reminder.isComplete) {
+    let dateText = dateFormatter.localizedString(for: reminder.dueDate, relativeTo: Date())
+    cell.configure(title: reminder.title, dateText: dateText, isDone: reminder.isComplete) {
       Reminder.testData[indexPath.row].isComplete.toggle()
       tableView.reloadRows(at: [indexPath], with: .none)
     }
