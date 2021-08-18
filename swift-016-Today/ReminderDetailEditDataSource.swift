@@ -25,6 +25,13 @@ class ReminderDetailEditDataSource: NSObject {
       }
     }
     
+    var numRows: Int {
+      switch self {
+        case .title, notes: return 1
+        case .dueDate: return 2
+      }
+    }
+    
     func cellIdentifier(for row: Int) -> String {
       switch self {
         case .title:
@@ -36,8 +43,17 @@ class ReminderDetailEditDataSource: NSObject {
       }
     }
     
+    static var dataLabelCellIdentifier: String {
+      return ReminderSection.dueDate.cellIdentifier(for: 0)
+    }
+    
   }
   
+  var reminder: Reminder
+  
+  init(reminder: Reminder) {
+    self.reminder = reminder
+  }
 }
 
 
@@ -48,7 +64,7 @@ extension ReminderDetailEditDataSource: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 0
+    return ReminderSection(rawValue: section)?.numRows ?? 0
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
