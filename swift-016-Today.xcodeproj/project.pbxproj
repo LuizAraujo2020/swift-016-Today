@@ -16,7 +16,7 @@
 		6F86550326CC887100A238DD /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F86550226CC887100A238DD /* Reminder.swift */; };
 		6F86550526CC9B8400A238DD /* ReminderListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F86550426CC9B8400A238DD /* ReminderListCell.swift */; };
 		6F86550726CD288B00A238DD /* ReminderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F86550626CD288B00A238DD /* ReminderDetailViewController.swift */; };
-
+		6F86550926CD4FBC00A238DD /* ReminderListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F86550826CD4FBC00A238DD /* ReminderListDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +31,7 @@
 		6F86550226CC887100A238DD /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		6F86550426CC9B8400A238DD /* ReminderListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListCell.swift; sourceTree = "<group>"; };
 		6F86550626CD288B00A238DD /* ReminderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderDetailViewController.swift; sourceTree = "<group>"; };
+		6F86550826CD4FBC00A238DD /* ReminderListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +48,6 @@
 		6F8654E026CC793700A238DD = {
 			isa = PBXGroup;
 			children = (
-				6F86550026CC7A2800A238DD /* README.md */,
 				6F8654EB26CC793700A238DD /* swift-016-Today */,
 				6F8654EA26CC793700A238DD /* Products */,
 			);
@@ -74,6 +74,7 @@
 				6F86550226CC887100A238DD /* Reminder.swift */,
 				6F86550426CC9B8400A238DD /* ReminderListCell.swift */,
 				6F86550626CD288B00A238DD /* ReminderDetailViewController.swift */,
+				6F86550826CD4FBC00A238DD /* ReminderListDataSource.swift */,
 			);
 			path = "swift-016-Today";
 			sourceTree = "<group>";
@@ -138,7 +139,6 @@
 			files = (
 				6F8654F926CC793800A238DD /* LaunchScreen.storyboard in Resources */,
 				6F8654F626CC793800A238DD /* Assets.xcassets in Resources */,
-				6F86550126CC7A2800A238DD /* README.md in Resources */,
 				6F8654F426CC793700A238DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,6 +156,7 @@
 				6F86550726CD288B00A238DD /* ReminderDetailViewController.swift in Sources */,
 				6F8654EF26CC793700A238DD /* SceneDelegate.swift in Sources */,
 				6F86550326CC887100A238DD /* Reminder.swift in Sources */,
+				6F86550926CD4FBC00A238DD /* ReminderListDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
