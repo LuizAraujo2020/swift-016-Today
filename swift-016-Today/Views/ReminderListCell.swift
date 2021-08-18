@@ -19,9 +19,7 @@ class ReminderListCell: UITableViewCell {
   private var doneButtonAction: DoneButtonAction?
   
   @IBAction func doneButtonTriggered(_ sender: UIButton) {
-    
     doneButtonAction?()
-    
   }
   
   func configure(title: String, dateText: String, isDone: Bool, doneButtonAction: @escaping DoneButtonAction) {
@@ -31,5 +29,4 @@ class ReminderListCell: UITableViewCell {
     doneButton.setBackgroundImage(image, for: .normal)
     self.doneButtonAction = doneButtonAction
   }
-  
 }
