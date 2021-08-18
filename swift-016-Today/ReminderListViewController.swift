@@ -9,7 +9,10 @@ import UIKit
 
 class ReminderListViewController: UITableViewController {
   
+  private var reminderListDataSource: ReminderListDataSource?
+  
   static let showDetailSegueIdentifier = "ShowReminderDetailSegue"
+  
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == Self.showDetailSegueIdentifier,
@@ -20,6 +23,13 @@ class ReminderListViewController: UITableViewController {
       detination.configure(with: reminder)
     }
   }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    reminderListDataSource = ReminderListDataSource()
+    tableView.dataSource = reminderListDataSource
+  }
+  
 }
 
 
