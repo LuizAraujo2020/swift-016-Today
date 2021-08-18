@@ -78,7 +78,15 @@
                             <outlet property="delegate" destination="fFe-C4-mps" id="tj0-Zw-iaf"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem systemItem="add" id="kH7-zD-0ck">
+                            <connections>
+                                <action selector="addButtonTriggered:" destination="fFe-C4-mps" id="lFV-Mo-QQQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="NuU-v6-d2p"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIb-zE-vQE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -202,13 +210,17 @@
         <!--Navigation Controller-->
         <scene sceneID="6uo-ju-BaD">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WKK-me-oba" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="WKK-me-oba" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3yK-rs-22D">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IFC-Qf-eNr">
+                        <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="fFe-C4-mps" kind="relationship" relationship="rootViewController" id="IWp-F0-8h8"/>
                     </connections>
