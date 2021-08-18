@@ -11,8 +11,8 @@ class EditTitleCell: UITableViewCell {
   
   @IBOutlet var titleTextFiled: UITextField!
   
-  func configure(text: String) {
-    titleTextFiled.text = text
+  func configure(title: String) {
+    titleTextFiled.text = title
   }
   
 }
