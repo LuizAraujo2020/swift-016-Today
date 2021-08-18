@@ -56,7 +56,7 @@ class ReminderDetailEditDataSource: NSObject {
   
   var reminder: Reminder
   private var reminderChangeAction: ReminderChangeAction?
-  
+
   private lazy var formatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .full
