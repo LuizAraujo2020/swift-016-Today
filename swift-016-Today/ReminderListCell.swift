@@ -11,10 +11,10 @@ import UIKit
 class ReminderListCell: UITableViewCell {
   
   typealias DoneButtonAction = () -> Void //cria um nickname para um tipo
-  
+  //encapsulate later
   @IBOutlet var titleLabel: UILabel!
   @IBOutlet var dateLabel : UILabel!
-  @IBOutlet var doneButton: UIButton!
+  @IBOutlet private var doneButton: UIButton!
   
   var doneButtonAction: DoneButtonAction?
   
