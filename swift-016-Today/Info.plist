@@ -62,5 +62,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSRemindersUsageDescription</key>
+	<string>The app uses reminders to help you stay on track.</string>
 </dict>
 </plist>
