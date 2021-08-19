@@ -34,6 +34,11 @@ class ReminderListDataSource: NSObject {
     Reminder.testData[index] = reminder
   }
   
+  func delete(at row: Int) {
+    let index = self.index(for: row)
+    Reminder.testData.remove(at: index)
+  }
+
   func reminder(at row: Int) -> Reminder {
     return filteredReminders[row]
   }
@@ -49,6 +54,18 @@ class ReminderListDataSource: NSObject {
       fatalError("Couldn't retrieve index in source array")
     }
     return index
+  }
+  
+  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    guard editingStyle == .delete else {
+      return
+    }
+    delete(at: indexPath.row)
+    tableView.performBatchUpdates({
+      tableView.deleteRows(at: [indexPath], with: .automatic)
+    }) { (_) in
+      tableView.reloadData()
+    }
   }
 
 }
