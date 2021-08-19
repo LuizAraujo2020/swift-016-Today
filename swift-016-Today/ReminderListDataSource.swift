@@ -5,19 +5,42 @@
 import UIKit
 
 class ReminderListDataSource: NSObject {
-    private lazy var dateFormatter = RelativeDateTimeFormatter()
-    
-    func update(_ reminder: Reminder, at row: Int) {
-        Reminder.testData[row] = reminder
-    }
-    
-    func reminder(at row: Int) -> Reminder {
-        return Reminder.testData[row]
-    }
+  private lazy var dateFormatter = RelativeDateTimeFormatter()
   
-    func add(_ reminder: Reminder) {
-      Reminder.testData.insert(reminder, at: 0)
+  enum Filter: Int {
+    case today
+    case future
+    case all
+    
+    func shouldInclude(date: Date) -> Bool {
+      let isInToday = Locale.current.calendar.isDateInToday(date)
+      switch self {
+        case .today:
+          return isInToday
+        case .future:
+          return (date > Date()) && !isInToday
+        case .all:
+          return true
+      }
     }
+  }
+  
+  var filter: Filter = .today
+  var filteredReminders: [Reminder] {
+    return Reminder.testData.filter { filter.shouldInclude(date: $0.dueDate) }.sorted { $0.dueDate < $1.dueDate }
+  }
+    
+  func update(_ reminder: Reminder, at row: Int) {
+      Reminder.testData[row] = reminder
+  }
+  
+  func reminder(at row: Int) -> Reminder {
+    return filteredReminders[row]
+  }
+
+  func add(_ reminder: Reminder) {
+    Reminder.testData.insert(reminder, at: 0)
+  }
 
 }
 
@@ -25,7 +48,7 @@ extension ReminderListDataSource: UITableViewDataSource {
     static let reminderListCellIdentifier = "ReminderListCell"
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Reminder.testData.count
+      return filteredReminders.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
