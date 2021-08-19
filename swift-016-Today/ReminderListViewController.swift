@@ -9,6 +9,8 @@ import UIKit
 
 class ReminderListViewController: UITableViewController {
   static let showDetailSegueIdentifier = "ShowReminderDetailSegue"
+  static let mainStoryboardName = "Main"
+  static let detailViewControllerIdentifier = "ReminderDetailViewController"
   
   private var reminderListDataSource: ReminderListDataSource?
   
@@ -43,6 +45,22 @@ class ReminderListViewController: UITableViewController {
   }
   
   @IBAction func addButtonTriggered(_ sender: UIBarButtonItem) {
+    addReminder()
+  }
+  
+  private func addReminder() {
+    // Instantiate Main.storyboard.
+    let storyboard = UIStoryboard(name: Self.mainStoryboardName, bundle: nil)
+    //Create a ReminderDetailViewController instance.
+    let detailViewController: ReminderDetailViewController = storyboard.instantiateViewController(identifier: Self.detailViewControllerIdentifier)
+    let reminder = Reminder(title: "New Reminder", dueDate: Date())
+    detailViewController.configure(with: reminder) { reminder in
+      
+    }
+    let navigationController = UINavigationController(rootViewController: detailViewController)
+    present(navigationController, animated: true, completion: nil)
+    
+    
   }
   
 }

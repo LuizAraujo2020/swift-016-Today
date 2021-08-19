@@ -95,7 +95,7 @@
         <!--View Reminder-->
         <scene sceneID="4eI-KB-tPk">
             <objects>
-                <tableViewController id="zT9-ln-cO4" customClass="ReminderDetailViewController" customModule="swift_016_Today" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ReminderDetailViewController" id="zT9-ln-cO4" customClass="ReminderDetailViewController" customModule="swift_016_Today" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="q3X-ae-hCk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
