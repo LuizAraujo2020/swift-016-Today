@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19115.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C3E-4a-AxX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C3E-4a-AxX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19107.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,53 +11,53 @@
         <!--Reminder List View Controller-->
         <scene sceneID="pXW-Qn-dtH">
             <objects>
-                <tableViewController id="BGH-XA-vmv" customClass="ReminderListViewController" customModule="swift_016_Today" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="BGH-XA-vmv" customClass="ReminderListViewController" customModule="Today" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="L19-M7-bkq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="hcZ-WM-VeD" userLabel="Progress Header View">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="QWz-j8-X7F" userLabel="Progress Header View">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2il-Dz-neS" userLabel="Progress Container View">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwF-4H-QKb" userLabel="Progress Container View">
                                     <rect key="frame" x="62" y="62" width="290" height="290"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rgx-TO-Vfj" userLabel="Percent Incomplete View">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8LJ-Db-M4Z" userLabel="Percent Incomplete View">
                                             <rect key="frame" x="0.0" y="0.0" width="290" height="144"/>
                                             <color key="backgroundColor" name="LIST_ProgressCircleIncomplete"/>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4sd-T8-A5e" userLabel="Percent Complete View">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i02-Xx-PD6" userLabel="Percent Complete View">
                                             <rect key="frame" x="0.0" y="144" width="290" height="146"/>
                                             <color key="backgroundColor" name="LIST_ProgressCircleComplete"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="146" id="zZc-NR-D0T"/>
+                                                <constraint firstAttribute="height" constant="146" id="eSJ-4e-0cO"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="4sd-T8-A5e" secondAttribute="bottom" id="7WP-Pq-MMK"/>
-                                        <constraint firstItem="Rgx-TO-Vfj" firstAttribute="top" secondItem="2il-Dz-neS" secondAttribute="top" id="DXG-73-mrA"/>
-                                        <constraint firstAttribute="width" secondItem="2il-Dz-neS" secondAttribute="height" multiplier="1:1" id="JNP-xs-gJ5"/>
-                                        <constraint firstItem="4sd-T8-A5e" firstAttribute="top" secondItem="Rgx-TO-Vfj" secondAttribute="bottom" id="RSa-x7-qAL"/>
-                                        <constraint firstItem="Rgx-TO-Vfj" firstAttribute="leading" secondItem="2il-Dz-neS" secondAttribute="leading" id="WGu-Rs-zdL"/>
-                                        <constraint firstAttribute="trailing" secondItem="Rgx-TO-Vfj" secondAttribute="trailing" id="YZx-ZH-Th1"/>
-                                        <constraint firstItem="4sd-T8-A5e" firstAttribute="leading" secondItem="2il-Dz-neS" secondAttribute="leading" id="mFL-mw-jbk"/>
-                                        <constraint firstAttribute="trailing" secondItem="4sd-T8-A5e" secondAttribute="trailing" id="zHj-uK-niF"/>
+                                        <constraint firstItem="8LJ-Db-M4Z" firstAttribute="leading" secondItem="rwF-4H-QKb" secondAttribute="leading" id="CEl-wg-WmG"/>
+                                        <constraint firstAttribute="trailing" secondItem="8LJ-Db-M4Z" secondAttribute="trailing" id="EwA-75-5Xc"/>
+                                        <constraint firstAttribute="trailing" secondItem="i02-Xx-PD6" secondAttribute="trailing" id="VZX-08-JPp"/>
+                                        <constraint firstItem="i02-Xx-PD6" firstAttribute="leading" secondItem="rwF-4H-QKb" secondAttribute="leading" id="cYG-3j-Zjc"/>
+                                        <constraint firstAttribute="width" secondItem="rwF-4H-QKb" secondAttribute="height" multiplier="1:1" id="dkZ-my-mPz"/>
+                                        <constraint firstItem="i02-Xx-PD6" firstAttribute="top" secondItem="8LJ-Db-M4Z" secondAttribute="bottom" id="mjw-6a-tlr"/>
+                                        <constraint firstItem="8LJ-Db-M4Z" firstAttribute="top" secondItem="rwF-4H-QKb" secondAttribute="top" id="wxl-NB-2d8"/>
+                                        <constraint firstAttribute="bottom" secondItem="i02-Xx-PD6" secondAttribute="bottom" id="ynB-Tx-RCM"/>
                                     </constraints>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="2il-Dz-neS" firstAttribute="centerX" secondItem="hcZ-WM-VeD" secondAttribute="centerX" id="flB-RR-RN7"/>
-                                <constraint firstItem="2il-Dz-neS" firstAttribute="width" secondItem="hcZ-WM-VeD" secondAttribute="width" multiplier="0.7" id="iT2-MQ-zqN"/>
-                                <constraint firstItem="2il-Dz-neS" firstAttribute="centerY" secondItem="hcZ-WM-VeD" secondAttribute="centerY" id="qmL-SV-HjF"/>
+                                <constraint firstItem="rwF-4H-QKb" firstAttribute="centerY" secondItem="QWz-j8-X7F" secondAttribute="centerY" id="AAE-OI-Gsa"/>
+                                <constraint firstItem="rwF-4H-QKb" firstAttribute="centerX" secondItem="QWz-j8-X7F" secondAttribute="centerX" id="lN5-08-IFR"/>
+                                <constraint firstItem="rwF-4H-QKb" firstAttribute="width" secondItem="QWz-j8-X7F" secondAttribute="width" multiplier="0.7" id="rmx-kp-nXz"/>
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ReminderListCell" rowHeight="99" id="A8L-pi-gbx" customClass="ReminderListCell" customModule="swift_016_Today" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="464" width="414" height="99"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ReminderListCell" rowHeight="99" id="A8L-pi-gbx" customClass="ReminderListCell" customModule="Today" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="442" width="414" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A8L-pi-gbx" id="76I-CK-Tu9">
                                     <rect key="frame" x="0.0" y="0.0" width="383" height="99"/>
@@ -101,7 +100,7 @@
                                         <constraint firstItem="nNJ-hf-kDU" firstAttribute="top" secondItem="KkO-xv-WN9" secondAttribute="bottom" constant="8" symbolic="YES" id="wrC-Ce-IuV"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" name="EDIT_TableRowBackground"/>
+                                <color key="backgroundColor" name="LIST_TableRowBackground"/>
                                 <connections>
                                     <outlet property="dateLabel" destination="nNJ-hf-kDU" id="ILq-BW-gOd"/>
                                     <outlet property="doneButton" destination="JWm-ug-oHM" id="3Pe-0A-N5I"/>
@@ -124,8 +123,8 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="NLN-6s-mZl">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="FbM-sf-yCD">
-                            <rect key="frame" x="108.5" y="5.5" width="197" height="33"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="ZDd-L9-HLP">
+                            <rect key="frame" x="117.5" y="5.5" width="179" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Today"/>
@@ -133,17 +132,17 @@
                                 <segment title="All"/>
                             </segments>
                             <connections>
-                                <action selector="segmentControlChanged:" destination="BGH-XA-vmv" eventType="valueChanged" id="Qv1-wd-i97"/>
+                                <action selector="segmentControlChanged:" destination="BGH-XA-vmv" eventType="valueChanged" id="27Z-ts-BxC"/>
                             </connections>
                         </segmentedControl>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="filterSegmentedControl" destination="FbM-sf-yCD" id="wvL-S6-3xw"/>
-                        <outlet property="percentCompleteHeightConstraint" destination="zZc-NR-D0T" id="Iei-Sw-cvf"/>
-                        <outlet property="percentCompleteView" destination="4sd-T8-A5e" id="PRG-7O-fGI"/>
-                        <outlet property="percentIncompleteView" destination="Rgx-TO-Vfj" id="b0b-uj-zeR"/>
-                        <outlet property="progressContainerView" destination="2il-Dz-neS" id="ckh-Lk-6p0"/>
+                        <outlet property="filterSegmentedControl" destination="ZDd-L9-HLP" id="NHx-p3-fbl"/>
+                        <outlet property="percentCompleteHeightConstraint" destination="eSJ-4e-0cO" id="iuQ-0Z-v0o"/>
+                        <outlet property="percentCompleteView" destination="i02-Xx-PD6" id="VTa-Gw-Raj"/>
+                        <outlet property="percentIncompleteView" destination="8LJ-Db-M4Z" id="YNl-hU-oQY"/>
+                        <outlet property="progressContainerView" destination="rwF-4H-QKb" id="Uyp-xR-vzn"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lD1-ZW-QcE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -153,11 +152,12 @@
         <!--View Reminder-->
         <scene sceneID="ZVM-YD-K9a">
             <objects>
-                <tableViewController storyboardIdentifier="ReminderDetailViewController" id="hHZ-wQ-w1L" customClass="ReminderDetailViewController" customModule="swift_016_Today" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ReminderDetailViewController" id="hHZ-wQ-w1L" customClass="ReminderDetailViewController" customModule="Today" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="mJv-EO-ZLt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="VIEW_Background"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" name="VIEW_Background"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReminderDetailCell" textLabel="pWV-a7-DF3" style="IBUITableViewCellStyleDefault" id="CAd-2l-a2i">
                                 <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
@@ -177,7 +177,7 @@
                                 </tableViewCellContentView>
                                 <color key="tintColor" name="VIEW_IconTint"/>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditTitleCell" id="th9-d1-hI2" customClass="EditTitleCell" customModule="swift_016_Today" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditTitleCell" id="th9-d1-hI2" customClass="EditTitleCell" customModule="Today" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="99" width="414" height="44.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="th9-d1-hI2" id="imh-Xx-61F">
@@ -187,7 +187,7 @@
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text Field" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="d2S-6f-eDq">
                                             <rect key="frame" x="20" y="0.0" width="374" height="44.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="44" id="My4-vd-uVE"/>
+                                                <constraint firstAttribute="height" constant="44" id="Zb0-nO-UTx"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -204,7 +204,7 @@
                                     <outlet property="titleTextField" destination="d2S-6f-eDq" id="RWv-UH-7Ef"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditDateCell" rowHeight="216" id="hJc-yu-gTg" customClass="EditDateCell" customModule="swift_016_Today" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditDateCell" rowHeight="216" id="hJc-yu-gTg" customClass="EditDateCell" customModule="Today" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="143.5" width="414" height="216"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hJc-yu-gTg" id="hV3-vR-tu4">
@@ -226,7 +226,7 @@
                                     <outlet property="datePicker" destination="tM1-Fs-8q7" id="D3E-ch-Rq9"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditNotesCell" rowHeight="216" id="jpC-rG-czT" customClass="EditNotesCell" customModule="swift_016_Today" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditNotesCell" rowHeight="216" id="jpC-rG-czT" customClass="EditNotesCell" customModule="Today" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="359.5" width="414" height="216"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jpC-rG-czT" id="NjL-HN-wS0">
@@ -274,7 +274,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="90b-fi-KDR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="NavigationBackground"/>
                         <color key="tintColor" name="NavigationItemTint"/>
                         <color key="barTintColor" name="NavigationBackground"/>
                     </navigationBar>
@@ -296,9 +295,6 @@
     </scenes>
     <resources>
         <image name="circle" catalog="system" width="128" height="121"/>
-        <namedColor name="EDIT_TableRowBackground">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </namedColor>
         <namedColor name="LIST_ProgressCircleComplete">
             <color white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </namedColor>
@@ -307,6 +303,9 @@
         </namedColor>
         <namedColor name="LIST_ReminderCompletedCircleTint">
             <color red="0.0" green="0.0" blue="0.0" alpha="0.65299999713897705" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="LIST_TableRowBackground">
+            <color white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </namedColor>
         <namedColor name="NavigationBackground">
             <color red="0.10999999195337296" green="0.10999999195337296" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
