@@ -86,8 +86,8 @@
                             <rect key="frame" x="108.5" y="5.5" width="197" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="First"/>
-                                <segment title="Second"/>
+                                <segment title="Today"/>
+                                <segment title="Future"/>
                                 <segment title="All"/>
                             </segments>
                             <connections>
