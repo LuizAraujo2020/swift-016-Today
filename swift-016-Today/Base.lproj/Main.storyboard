@@ -137,6 +137,10 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="filterSegmentedControl" destination="FbM-sf-yCD" id="wvL-S6-3xw"/>
+                        <outlet property="percentCompleteHeightConstraint" destination="zZc-NR-D0T" id="Iei-Sw-cvf"/>
+                        <outlet property="percentCompleteView" destination="4sd-T8-A5e" id="PRG-7O-fGI"/>
+                        <outlet property="percentIncompleteView" destination="Rgx-TO-Vfj" id="b0b-uj-zeR"/>
+                        <outlet property="progressContainerView" destination="2il-Dz-neS" id="ckh-Lk-6p0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lD1-ZW-QcE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

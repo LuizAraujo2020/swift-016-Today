@@ -7,6 +7,11 @@ import UIKit
 class ReminderListViewController: UITableViewController {
   @IBOutlet var filterSegmentedControl: UISegmentedControl!
 
+  @IBOutlet var progressContainerView: UIView!
+  @IBOutlet var percentCompleteView: UIView!
+  @IBOutlet var percentIncompleteView: UIView!
+  @IBOutlet var percentCompleteHeightConstraint: NSLayoutConstraint!
+  
   static let showDetailSegueIdentifier = "ShowReminderDetailSegue"
   static let mainStoryboardName = "Main"
   static let detailViewControllerIdentifier = "ReminderDetailViewController"
@@ -36,6 +41,13 @@ class ReminderListViewController: UITableViewController {
     super.viewDidLoad()
     reminderListDataSource = ReminderListDataSource()
     tableView.dataSource = reminderListDataSource
+  }
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    let radius = view.bounds.size.width * 0.5 * 0.7
+    progressContainerView.layer.cornerRadius = radius
+    progressContainerView.layer.masksToBounds = true
+
   }
   
   override func viewDidAppear(_ animated: Bool) {
