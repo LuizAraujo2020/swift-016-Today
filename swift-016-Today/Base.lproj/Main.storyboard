@@ -20,37 +20,39 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2il-Dz-neS" userLabel=" Progress Container View">
-                                    <rect key="frame" x="50" y="50" width="314" height="314"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2il-Dz-neS" userLabel="Progress Container View">
+                                    <rect key="frame" x="62" y="62" width="290" height="290"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rgx-TO-Vfj" userLabel="Percent Incomplete View">
-                                            <rect key="frame" x="0.0" y="0.0" width="314" height="157"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="290" height="144"/>
                                             <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4sd-T8-A5e" userLabel="Percent Complete View">
-                                            <rect key="frame" x="0.0" y="157" width="314" height="157"/>
+                                            <rect key="frame" x="0.0" y="144" width="290" height="146"/>
                                             <color key="backgroundColor" systemColor="systemTealColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="146" id="zZc-NR-D0T"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstItem="4sd-T8-A5e" firstAttribute="bottom" secondItem="2il-Dz-neS" secondAttribute="bottom" id="2nP-jg-eYH"/>
-                                        <constraint firstItem="Rgx-TO-Vfj" firstAttribute="leading" secondItem="2il-Dz-neS" secondAttribute="leading" id="Nd5-WO-Omx"/>
-                                        <constraint firstItem="Rgx-TO-Vfj" firstAttribute="top" secondItem="2il-Dz-neS" secondAttribute="top" id="Q6y-B1-89d"/>
-                                        <constraint firstAttribute="trailing" secondItem="4sd-T8-A5e" secondAttribute="trailing" id="bpz-FQ-vG6"/>
-                                        <constraint firstItem="4sd-T8-A5e" firstAttribute="top" secondItem="Rgx-TO-Vfj" secondAttribute="bottom" id="gXV-SX-V0N"/>
-                                        <constraint firstAttribute="trailing" secondItem="Rgx-TO-Vfj" secondAttribute="trailing" id="jAg-kf-bgc"/>
-                                        <constraint firstItem="4sd-T8-A5e" firstAttribute="leading" secondItem="2il-Dz-neS" secondAttribute="leading" id="q1x-x6-EGv"/>
-                                        <constraint firstItem="4sd-T8-A5e" firstAttribute="height" secondItem="2il-Dz-neS" secondAttribute="width" multiplier="0.5" id="u8D-6A-9uY"/>
+                                        <constraint firstAttribute="bottom" secondItem="4sd-T8-A5e" secondAttribute="bottom" id="7WP-Pq-MMK"/>
+                                        <constraint firstItem="Rgx-TO-Vfj" firstAttribute="top" secondItem="2il-Dz-neS" secondAttribute="top" id="DXG-73-mrA"/>
+                                        <constraint firstAttribute="width" secondItem="2il-Dz-neS" secondAttribute="height" multiplier="1:1" id="JNP-xs-gJ5"/>
+                                        <constraint firstItem="4sd-T8-A5e" firstAttribute="top" secondItem="Rgx-TO-Vfj" secondAttribute="bottom" id="RSa-x7-qAL"/>
+                                        <constraint firstItem="Rgx-TO-Vfj" firstAttribute="leading" secondItem="2il-Dz-neS" secondAttribute="leading" id="WGu-Rs-zdL"/>
+                                        <constraint firstAttribute="trailing" secondItem="Rgx-TO-Vfj" secondAttribute="trailing" id="YZx-ZH-Th1"/>
+                                        <constraint firstItem="4sd-T8-A5e" firstAttribute="leading" secondItem="2il-Dz-neS" secondAttribute="leading" id="mFL-mw-jbk"/>
+                                        <constraint firstAttribute="trailing" secondItem="4sd-T8-A5e" secondAttribute="trailing" id="zHj-uK-niF"/>
                                     </constraints>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemGreenColor"/>
                             <constraints>
-                                <constraint firstItem="2il-Dz-neS" firstAttribute="leading" secondItem="hcZ-WM-VeD" secondAttribute="leading" constant="50" id="Xry-QS-3FX"/>
-                                <constraint firstAttribute="trailing" secondItem="2il-Dz-neS" secondAttribute="trailing" constant="50" id="Y86-bx-8uy"/>
-                                <constraint firstAttribute="bottom" secondItem="2il-Dz-neS" secondAttribute="bottom" constant="50" id="rjQ-Qm-ksx"/>
-                                <constraint firstItem="2il-Dz-neS" firstAttribute="top" secondItem="hcZ-WM-VeD" secondAttribute="top" constant="50" id="vmw-ln-GdU"/>
+                                <constraint firstItem="2il-Dz-neS" firstAttribute="centerX" secondItem="hcZ-WM-VeD" secondAttribute="centerX" id="flB-RR-RN7"/>
+                                <constraint firstItem="2il-Dz-neS" firstAttribute="width" secondItem="hcZ-WM-VeD" secondAttribute="width" multiplier="0.7" id="iT2-MQ-zqN"/>
+                                <constraint firstItem="2il-Dz-neS" firstAttribute="centerY" secondItem="hcZ-WM-VeD" secondAttribute="centerY" id="qmL-SV-HjF"/>
                             </constraints>
                         </view>
                         <prototypes>
